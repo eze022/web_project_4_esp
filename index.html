@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/united-states-of-america.png" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Alrededor de los EE.UU</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">
+          <img
+            src="./images/tittle.svg"
+            alt="Around the U.S"
+            class="header__logo"
+          />
+        </h1>
+        <div class="header__line"></div>
+      </header>
+      <main class="main">
+        <section class="profile">
+          <div class="profile-info">
+            <img
+              src="./images/avatar.svg"
+              alt="persona"
+              class="profile-info__avatar-img"
+            />
+            <div class="profile-info__container">
+              <div class="profile-info__container-info">
+                <p class="profile-info__fullname">Jacques Cousteau</p>
+                <div class="edit-btn">
+                  <img
+                    src="./images/pencil.svg"
+                    alt="lapiz"
+                    class="edit-btn__pencil"
+                  />
+                </div>
+              </div>
+              <p class="profile-info__job">Explorador</p>
+            </div>
+          </div>
+          <button type="submit" class="add-btn" value="submit">
+            <img
+              src="./images/plus.svg"
+              alt="signo '+'"
+              class="add-btn__plus"
+            />
+          </button>
+          <div class="template">
+            <div class="popup">
+              <a class="popup__close-btn">
+                <img
+                  src="./images/Close-Icon.svg"
+                  alt="Cruz"
+                  class="popup__img-close"
+                />
+              </a>
+              <div class="popup__container">
+                <h3 class="popup__title">Editar Perfil</h3>
+                <form class="popup__form" name="register">
+                  <input
+                    class="popup__input popup__input_name"
+                    type="text"
+                    name="name"
+                    placeholder="Nombre"
+                    required
+                  />
+                  <input
+                    class="popup__input popup__input_job"
+                    type="text"
+                    name="job"
+                    placeholder="Profesión"
+                    required
+                  />
+                  <button type="button" class="popup__save-btn">Guardar</button>
+                </form>
+              </div>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </section>
+        <div class="elements">
+          <ul class="elements__table">
+            <li class="elements__cards">
+              <img
+                src="./images/Yosemite.svg"
+                alt="Valle de Yosemite"
+                class="elements__place"
+              />
+              <div class="elements__container-info">
+                <p class="elements__description">Valle de Yosemite</p>
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="icono de corazon"
+                  class="elements__icon"
+                />
+              </div>
+            </li>
+            <li class="elements__cards">
+              <img
+                src="./images/Louise.svg"
+                alt="Lago Louise"
+                class="elements__place"
+              />
+              <div class="elements__container-info">
+                <p class="elements__description">Lago Louise</p>
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="icono de corazon"
+                  class="elements__icon"
+                />
+              </div>
+            </li>
+            <li class="elements__cards">
+              <img
+                src="./images/Montañas-calvas.svg"
+                alt="Montañas Calvas"
+                class="elements__place"
+              />
+
+              <div class="elements__container-info">
+                <p class="elements__description">Montañas Calvas</p>
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="icono de corazon"
+                  class="elements__icon"
+                />
+              </div>
+            </li>
+            <li class="elements__cards">
+              <img
+                src="./images/Latemar.svg"
+                alt="Latemar"
+                class="elements__place"
+              />
+              <div class="elements__container-info">
+                <p class="elements__description">Latemar</p>
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="icono de corazon"
+                  class="elements__icon"
+                />
+              </div>
+            </li>
+            <li class="elements__cards">
+              <img
+                src="./images/Vanoise.svg"
+                alt="Vanoise National"
+                class="elements__place"
+              />
+              <div class="elements__container-info">
+                <p class="elements__description">Vanoise National park</p>
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="icono de corazon"
+                  class="elements__icon"
+                />
+              </div>
+            </li>
+            <li class="elements__cards">
+              <img
+                src="./images/Di-Braies.svg"
+                alt="Lago di Braies"
+                class="elements__place"
+              />
+              <div class="elements__container-info">
+                <p class="elements__description">Lago di Braies</p>
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="icono de corazon"
+                  class="elements__icon"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2022 Alrededor de los EEUU</p>
+      </footer>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

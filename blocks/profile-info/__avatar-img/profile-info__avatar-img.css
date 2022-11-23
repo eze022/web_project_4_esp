@@ -1,0 +1,11 @@
+.profile-info__avatar-img {
+  width: 42.5531914893617%;
+  max-width: 180px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1280px) {
+  .profile-info__avatar-img {
+    width: 120px;
+  }
+}

@@ -1,0 +1,32 @@
+.popup__input {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-bottom: 1.875rem;
+  padding: 0;
+  padding-bottom: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.popup__input:last-of-type {
+  margin-bottom: 48px;
+}
+
+.popup__input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .popup__input {
+    padding-bottom: 13.34px;
+    margin-bottom: 29.74px;
+  }
+}
