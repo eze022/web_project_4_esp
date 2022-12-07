@@ -79,103 +79,80 @@
                 </form>
               </div>
             </div>
+            <div class="popup_new-place">
+              <a class="popup__close-btn_new-place">
+                <img
+                  src="./images/Close-Icon.svg"
+                  alt="Cruz"
+                  class="popup__img-close"
+                />
+              </a>
+              <div class="popup__container">
+                <h3 class="popup__title">Nuevo Lugar</h3>
+                <form class="popup__form" name="new-place">
+                  <input
+                    class="popup__input popup__input_title"
+                    type="text"
+                    name="title"
+                    placeholder="Título"
+                    required
+                  />
+                  <input
+                    class="popup__input popup__input_url-image"
+                    type="text"
+                    name="url-image"
+                    placeholder="Enlace a la imagen"
+                    required
+                  />
+                  <button type="button" class="popup__create-btn">Crear</button>
+                </form>
+              </div>
+            </div>
             <div class="overlay"></div>
           </div>
         </section>
-        <div class="elements">
-          <ul class="elements__table">
-            <li class="elements__cards">
-              <img
-                src="./images/Yosemite.svg"
-                alt="Valle de Yosemite"
-                class="elements__place"
-              />
-              <div class="elements__container-info">
-                <p class="elements__description">Valle de Yosemite</p>
-                <img
-                  src="./images/heart-icon.svg"
-                  alt="icono de corazon"
-                  class="elements__icon"
-                />
-              </div>
-            </li>
-            <li class="elements__cards">
-              <img
-                src="./images/Louise.svg"
-                alt="Lago Louise"
-                class="elements__place"
-              />
-              <div class="elements__container-info">
-                <p class="elements__description">Lago Louise</p>
-                <img
-                  src="./images/heart-icon.svg"
-                  alt="icono de corazon"
-                  class="elements__icon"
-                />
-              </div>
-            </li>
-            <li class="elements__cards">
-              <img
-                src="./images/Montañas-calvas.svg"
-                alt="Montañas Calvas"
-                class="elements__place"
-              />
 
-              <div class="elements__container-info">
-                <p class="elements__description">Montañas Calvas</p>
+        <div class="elements">
+          <ul class="elements__table"></ul>
+          <template id="cards-template">
+            <ul class="elements__table">
+              <li class="elements__cards">
                 <img
-                  src="./images/heart-icon.svg"
-                  alt="icono de corazon"
-                  class="elements__icon"
+                  src="./images/Yosemite.svg"
+                  alt="Valle de Yosemite"
+                  class="elements__place"
                 />
-              </div>
-            </li>
-            <li class="elements__cards">
-              <img
-                src="./images/Latemar.svg"
-                alt="Latemar"
-                class="elements__place"
-              />
-              <div class="elements__container-info">
-                <p class="elements__description">Latemar</p>
                 <img
-                  src="./images/heart-icon.svg"
-                  alt="icono de corazon"
-                  class="elements__icon"
+                  src="./images/trash.svg"
+                  alt="basura"
+                  class="elements__trash"
                 />
-              </div>
-            </li>
-            <li class="elements__cards">
-              <img
-                src="./images/Vanoise.svg"
-                alt="Vanoise National"
-                class="elements__place"
-              />
-              <div class="elements__container-info">
-                <p class="elements__description">Vanoise National park</p>
+
+                <div class="elements__container-info">
+                  <p class="elements__description"></p>
+                  <img
+                    src="./images/heart-icon.svg"
+                    alt="icono de corazon"
+                    class="elements__icon"
+                  />
+                </div>
+              </li>
+            </ul>
+          </template>
+          <div class="elements__popup">
+            <div class="elements__popup-container">
+              <a class="popup__close-btn_show-image">
                 <img
-                  src="./images/heart-icon.svg"
-                  alt="icono de corazon"
-                  class="elements__icon"
+                  src="./images/Close-Icon.svg"
+                  alt="Cruz"
+                  class="popup__img-close"
                 />
-              </div>
-            </li>
-            <li class="elements__cards">
-              <img
-                src="./images/Di-Braies.svg"
-                alt="Lago di Braies"
-                class="elements__place"
-              />
-              <div class="elements__container-info">
-                <p class="elements__description">Lago di Braies</p>
-                <img
-                  src="./images/heart-icon.svg"
-                  alt="icono de corazon"
-                  class="elements__icon"
-                />
-              </div>
-            </li>
-          </ul>
+              </a>
+              <img class="elements__place-popup" src="" alt="imagen" />
+              <p class="elements__description-popup"></p>
+            </div>
+          </div>
+          <div class="overlay"></div>
         </div>
       </main>
       <footer class="footer">

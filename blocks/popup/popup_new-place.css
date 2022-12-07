@@ -1,4 +1,4 @@
-.popup {
+.popup_new-place {
   width: 88.125%;
   max-width: 430px;
   background: #ffffff;
@@ -16,7 +16,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .popup {
+  .popup_new-place {
     top: 201px;
     left: calc(50vw - 215px);
     padding: 34px 0 36.51px;

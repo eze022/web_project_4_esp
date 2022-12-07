@@ -1,11 +1,12 @@
 .overlay {
   background-color: black;
-  opacity: 0.5;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 0;
-  display: none;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s linear;
 }
