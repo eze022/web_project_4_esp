@@ -1,17 +1,17 @@
-.popup__close-btn_new-place {
+.popup__close-btn_content_new-place {
   position: absolute;
   top: -47px;
   right: 8px;
   transition: opacity 1s linear;
 }
 
-.popup__close-btn_new-place:hover {
+.popup__close-btn_content_new-place:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (min-width: 1280px) {
-  .popup__close-btn_new-place {
+  .popup__close-btn_content_new-place {
     right: -42px;
   }
 }

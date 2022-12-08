@@ -6,14 +6,14 @@ let inputTitle = document.querySelector(".popup__input_title");
 let inputUrlImage = document.querySelector(".popup__input_url-image");
 const overlay = document.querySelector(".overlay");
 const popupEditProfile = document.querySelector(".popup");
-const popupNewPlace = document.querySelector(".popup_new-place");
+const popupNewPlace = document.querySelector(".popup_content_new-place");
 const openFormButton = document.querySelector(".edit-btn");
 const closeButton = document.querySelector(".popup__close-btn");
 const closeButtonNewPlace = document.querySelector(
-  ".popup__close-btn_new-place"
+  ".popup__close-btn_content_new-place"
 );
 const closeButtonShowImage = document.querySelector(
-  ".popup__close-btn_show-image"
+  ".popup__close-btn_content_show-image"
 );
 const saveButton = document.querySelector(".popup__save-btn");
 const addButton = document.querySelector(".add-btn");

@@ -2,12 +2,10 @@
   width: 88.125%;
   max-width: 430px;
   background: #ffffff;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding: 25px 0;
   position: fixed;
   top: 135px;
-  left: calc(50vw - 282px / 100%);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s, visibility 0.5s linear;
