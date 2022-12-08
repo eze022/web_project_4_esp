@@ -13,7 +13,7 @@ const closeButtonNewPlace = document.querySelector(
   ".popup__close-btn_content_new-place"
 );
 const closeButtonShowImage = document.querySelector(
-  ".popup__close-btn_content_show-image"
+  ".elements__close-btn_content_show-image"
 );
 const saveButton = document.querySelector(".popup__save-btn");
 const addButton = document.querySelector(".add-btn");
