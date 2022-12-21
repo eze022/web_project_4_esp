@@ -8,9 +8,8 @@
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
-  margin-bottom: 1.875rem;
   padding: 0;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -26,7 +25,6 @@
 
 @media screen and (min-width: 1280px) {
   .popup__input {
-    padding-bottom: 13.34px;
     margin-bottom: 29.74px;
   }
 }
