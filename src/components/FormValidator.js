@@ -1,13 +1,4 @@
-const parametres = {
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_inactive",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__input-error_active",
-};
-
-class FormValidator {
+export default class FormValidator {
   constructor(parametres) {
     (this._formSelector = parametres.formSelector),
       (this._inputSelector = parametres.inputSelector),
@@ -88,6 +79,3 @@ class FormValidator {
     });
   }
 }
-
-const formValidator = new FormValidator(parametres);
-formValidator.enableValidation();

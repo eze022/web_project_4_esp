@@ -1,9 +1,9 @@
-.elements__img-close {
+.close-btn__img {
   width: 26px;
 }
 
 @media screen and (min-width: 1280px) {
-  .elements__img-close {
+  .close-btn__img {
     width: 40px;
   }
 }

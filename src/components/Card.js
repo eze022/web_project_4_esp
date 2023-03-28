@@ -1,17 +1,10 @@
-import {
-  _handleClosePopup,
-  _handleOpenPopup,
-  showImage,
-  HandlecloseButton,
-  likeCards,
-  removeCards,
-} from "./utils.js";
+import { likeCards, removeCards } from "../utils/utils.js";
 
-import { initialCards } from "./index.js";
-
-export class Card {
-  constructor(text, image) {
-    (this._text = text), (this._image = image);
+export default class Card {
+  constructor({ data, handleCardClick }) {
+    this._text = data.name;
+    this._image = data.link;
+    this.handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -36,6 +29,7 @@ export class Card {
     this._element.querySelector(".elements__place").src = this._image;
     this._element.querySelector(".elements__description").textContent =
       this._text;
+    this._element.querySelector(".elements__place").alt = this._text;
 
     return this._element;
   }
@@ -43,16 +37,7 @@ export class Card {
   _setEventListeners() {
     const image = this._element.querySelector(".elements__place");
     const heart = this._element.querySelector(".elements__icon");
-    showImage(image);
-    HandlecloseButton();
     likeCards(this._element);
     removeCards(this._element);
   }
 }
-
-initialCards.forEach((item) => {
-  const cards = new Card(item.name, item.link).generateCard();
-  const cardContainer = document.querySelector(".elements__table");
-
-  cardContainer.append(cards);
-});

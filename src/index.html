@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/united-states-of-america.png" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <title>Alrededor de los EE.UU</title>
   </head>
   <body>
@@ -13,7 +12,7 @@
       <header class="header">
         <h1 class="header__title">
           <img
-            src="./images/tittle.svg"
+            src="<%=require('./images/tittle.svg')%>"
             alt="Around the U.S"
             class="header__logo"
           />
@@ -24,7 +23,7 @@
         <section class="profile">
           <div class="profile-info">
             <img
-              src="./images/avatar.svg"
+              src="<%=require('./images/avatar.svg')%>"
               alt="persona"
               class="profile-info__avatar-img"
             />
@@ -33,7 +32,7 @@
                 <p class="profile-info__fullname">Jacques Cousteau</p>
                 <div class="edit-btn">
                   <img
-                    src="./images/pencil.svg"
+                    src="<%=require('./images/pencil.svg')%>"
                     alt="lapiz"
                     class="edit-btn__pencil"
                   />
@@ -44,18 +43,18 @@
           </div>
           <button type="submit" class="add-btn" value="submit">
             <img
-              src="./images/plus.svg"
+              src="<%=require('./images/plus.svg')%>"
               alt="signo '+'"
               class="add-btn__plus"
             />
           </button>
           <div class="template">
             <div class="popup">
-              <a class="popup__close-btn">
+              <a class="close-btn">
                 <img
-                  src="./images/Close-Icon.svg"
+                  src="<%=require('./images/Close-Icon.svg')%>"
                   alt="Cruz"
-                  class="popup__img-close"
+                  class="close-btn__img"
                 />
               </a>
               <div class="popup__container">
@@ -100,11 +99,11 @@
               </div>
             </div>
             <div class="popup popup_content_new-place">
-              <a class="popup__close-btn popup__close-btn_content_new-place">
+              <a class="close-btn">
                 <img
-                  src="./images/Close-Icon.svg"
+                  src="<%=require('./images/Close-Icon.svg')%>"
                   alt="Cruz"
-                  class="popup__img-close"
+                  class="close-btn__img"
                 />
               </a>
               <div class="popup__container">
@@ -157,12 +156,12 @@
             <ul class="elements__table">
               <li class="elements__cards">
                 <img
-                  src="./images/Yosemite.svg"
+                  src="<%=require('./images/Yosemite.svg')%>"
                   alt="imagen"
                   class="elements__place"
                 />
                 <img
-                  src="./images/trash.svg"
+                  src="<%=require('./images/trash.svg')%>"
                   alt="basura"
                   class="elements__trash"
                 />
@@ -170,7 +169,7 @@
                 <div class="elements__container-info">
                   <p class="elements__description"></p>
                   <img
-                    src="./images/heart-icon.svg"
+                    src="<%=require('./images/heart-icon.svg')%>"
                     alt="icono de corazon"
                     class="elements__icon"
                   />
@@ -180,13 +179,11 @@
           </template>
           <div class="elements__popup">
             <div class="elements__popup-container">
-              <a
-                class="elements__close-btn elements__close-btn_content_show-image"
-              >
+              <a class="close-btn close-btn_show-image">
                 <img
-                  src="./images/Close-Icon.svg"
+                  src="<%=require('./images/Close-Icon.svg')%>"
                   alt="Cruz"
-                  class="elements__img-close"
+                  class="close-btn__img"
                 />
               </a>
               <img class="elements__place-popup" src=" " alt="imagen" />
@@ -200,9 +197,5 @@
         <p class="footer__copyright">© 2022 Alrededor de los EEUU</p>
       </footer>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
-    <script type="module" src="./scripts/FormValidator.js"></script>
-    <script type="module" src="./scripts/Card.js"></script>
-    <script type="module" src="./scripts/utils.js"></script>
   </body>
 </html>
