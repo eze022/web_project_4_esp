@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/united-states-of-america.png" />
+    <title>Alrededor de los EE.UU</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">
+          <img
+            src="229667a1c52df21375a8.svg"
+            alt="Around the U.S"
+            class="header__logo"
+          />
+        </h1>
+        <div class="header__line"></div>
+      </header>
+      <main class="main">
+        <section class="profile">
+          <div class="profile-info">
+            <img
+              src="dff2616ddc97022850c1.svg"
+              alt="persona"
+              class="profile-info__avatar-img"
+            />
+            <div class="profile-info__container">
+              <div class="profile-info__container-info">
+                <p class="profile-info__fullname">Jacques Cousteau</p>
+                <div class="edit-btn">
+                  <img
+                    src="ff0fcb318a3974db48d1.svg"
+                    alt="lapiz"
+                    class="edit-btn__pencil"
+                  />
+                </div>
+              </div>
+              <p class="profile-info__job">Explorador</p>
+            </div>
+          </div>
+          <button type="submit" class="add-btn" value="submit">
+            <img
+              src="54b1426515811a15ebaf.svg"
+              alt="signo '+'"
+              class="add-btn__plus"
+            />
+          </button>
+          <div class="template">
+            <div class="popup">
+              <a class="close-btn">
+                <img
+                  src="81d0f6a6ee1da3d7d7d2.svg"
+                  alt="Cruz"
+                  class="close-btn__img"
+                />
+              </a>
+              <div class="popup__container">
+                <h3 class="popup__title">Editar Perfil</h3>
+                <form class="popup__form" name="register" novalidate>
+                  <fieldset class="popup__set">
+                    <label class="popup__field"
+                      ><input
+                        class="popup__input popup__input_name"
+                        id="name-input"
+                        type="text"
+                        name="name"
+                        placeholder="Nombre"
+                        minlength="2"
+                        maxlength="40"
+                        required
+                      />
+                      <span class="popup__input-error name-input-error"></span>
+                    </label>
+                    <label class="popup__field">
+                      <input
+                        class="popup__input popup__input_job"
+                        id="job-input"
+                        type="text"
+                        name="job"
+                        placeholder="Profesión"
+                        minlength="2"
+                        maxlength="200"
+                        required
+                      />
+                      <span class="popup__input-error job-input-error"></span>
+                    </label>
+
+                    <button
+                      type="button"
+                      class="popup__save-btn popup__button popup__button_inactive"
+                    >
+                      Guardar
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="popup popup_content_new-place">
+              <a class="close-btn">
+                <img
+                  src="81d0f6a6ee1da3d7d7d2.svg"
+                  alt="Cruz"
+                  class="close-btn__img"
+                />
+              </a>
+              <div class="popup__container">
+                <h3 class="popup__title">Nuevo Lugar</h3>
+
+                <form class="popup__form" name="new-place" novalidate>
+                  <fieldset class="popup__set">
+                    <label class="popup__field">
+                      <input
+                        class="popup__input popup__input_title"
+                        id="title-input"
+                        type="text"
+                        name="title"
+                        placeholder="Título"
+                        minlength="2"
+                        maxlength="30"
+                        required
+                      />
+                      <span class="popup__input-error title-input-error"></span>
+                    </label>
+                    <label class="popup__field">
+                      <input
+                        class="popup__input popup__input_url-image"
+                        id="url-input"
+                        type="url"
+                        name="url-image"
+                        placeholder="Enlace a la imagen"
+                        required
+                      />
+                      <span class="popup__input-error url-input-error"></span>
+                    </label>
+
+                    <button
+                      type="button"
+                      class="popup__create-btn popup__button popup__button_inactive"
+                    >
+                      Crear
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </section>
+
+        <div class="elements">
+          <ul class="elements__table"></ul>
+          <template id="cards-template">
+            <ul class="elements__table">
+              <li class="elements__cards">
+                <img
+                  src="e43af7e528616bf5e1e9.svg"
+                  alt="imagen"
+                  class="elements__place"
+                />
+                <img
+                  src="8cb59aa98088a1653f62.svg"
+                  alt="basura"
+                  class="elements__trash"
+                />
+
+                <div class="elements__container-info">
+                  <p class="elements__description"></p>
+                  <img
+                    src="3826c074a1b94b101e38.svg"
+                    alt="icono de corazon"
+                    class="elements__icon"
+                  />
+                </div>
+              </li>
+            </ul>
+          </template>
+          <div class="elements__popup">
+            <div class="elements__popup-container">
+              <a class="close-btn close-btn_show-image">
+                <img
+                  src="81d0f6a6ee1da3d7d7d2.svg"
+                  alt="Cruz"
+                  class="close-btn__img"
+                />
+              </a>
+              <img class="elements__place-popup" src=" " alt="imagen" />
+              <p class="elements__description-popup"></p>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2022 Alrededor de los EEUU</p>
+      </footer>
+    </div>
+  </body>
+</html>
