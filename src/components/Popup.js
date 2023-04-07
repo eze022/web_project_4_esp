@@ -1,11 +1,5 @@
 import { overlay, closeButton } from "../utils/constants.js";
 
-/* import {
-  openFormButton,
-  closeFormButton,
-  closeButtonNewPlace,
-} from "../utils/constants"; */
-
 export default class Popup {
   constructor(popup, button) {
     this._popup = document.querySelector(popup);

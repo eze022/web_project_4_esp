@@ -8,8 +8,9 @@ let inputName = document.querySelector(".popup__input_name");
 let inputJob = document.querySelector(".popup__input_job");
 let profileFullName = document.querySelector(".profile-info__fullname");
 let profileJob = document.querySelector(".profile-info__job");
-let inputTitle = document.querySelector(".popup__input_title");
+let inputTitle = document.querySelector("#title-input");
 let inputUrlImage = document.querySelector("#url-input");
+let inputUrlImageAvatar = document.querySelector("#avatar-input");
 const popupImage = document.querySelector(".elements__place-popup");
 const popupDescription = document.querySelector(".elements__description-popup");
 const popupElement = document.querySelector(".elements__popup");
@@ -21,34 +22,9 @@ const popupEditProfile = document.querySelector(".popup");
 const popupNewPlace = document.querySelector(".popup_content_new-place");
 const saveButton = document.querySelector(".popup__save-btn");
 const createButton = document.querySelector(".popup__create-btn");
-
-const initialCards = [
-  {
-    name: "Valle de Yosemite",
-    link: yosemiteSrc,
-  },
-  {
-    name: "Lago Louise",
-    link: lagoSrc,
-  },
-  {
-    name: "Montañas Calvas",
-    link: montañasSrc,
-  },
-  {
-    name: "Latemar",
-    link: latemarSrc,
-  },
-  {
-    name: "Parque Nacional de la Vanoise",
-    link: vanoiseSrc,
-  },
-  {
-    name: "Lago di Braies",
-    link: braiesSrc,
-  },
-];
-
+const optionButton = document.querySelector(".popup__confirm");
+const profileImage = document.querySelector(".profile-info__avatar-img");
+const avatarButton = document.querySelector(".popup__button-avatar");
 const parametres = {
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
@@ -77,5 +53,8 @@ export {
   saveButton,
   createButton,
   parametres,
-  initialCards,
+  optionButton,
+  profileImage,
+  inputUrlImageAvatar,
+  avatarButton,
 };

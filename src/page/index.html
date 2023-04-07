@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/united-states-of-america.png" />
+    <link rel="icon" href="../images/united-states-of-america.png" />
     <title>Alrededor de los EE.UU</title>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <header class="header">
         <h1 class="header__title">
           <img
-            src="<%=require('./images/tittle.svg')%>"
+            src="<%=require('../images/tittle.svg')%>"
             alt="Around the U.S"
             class="header__logo"
           />
@@ -23,27 +23,34 @@
         <section class="profile">
           <div class="profile-info">
             <img
-              src="<%=require('./images/avatar.svg')%>"
+              src="<%=require('../images/avatar.svg')%>"
               alt="persona"
               class="profile-info__avatar-img"
             />
+
+            <img
+              src="<%=require('../images/pencil-photo.svg')%>"
+              alt=""
+              class="profile-info__pencil-img"
+            />
+
             <div class="profile-info__container">
               <div class="profile-info__container-info">
-                <p class="profile-info__fullname">Jacques Cousteau</p>
+                <p class="profile-info__fullname"></p>
                 <div class="edit-btn">
                   <img
-                    src="<%=require('./images/pencil.svg')%>"
+                    src="<%=require('../images/pencil.svg')%>"
                     alt="lapiz"
                     class="edit-btn__pencil"
                   />
                 </div>
               </div>
-              <p class="profile-info__job">Explorador</p>
+              <p class="profile-info__job"></p>
             </div>
           </div>
           <button type="submit" class="add-btn" value="submit">
             <img
-              src="<%=require('./images/plus.svg')%>"
+              src="<%=require('../images/plus.svg')%>"
               alt="signo '+'"
               class="add-btn__plus"
             />
@@ -52,7 +59,7 @@
             <div class="popup">
               <a class="close-btn">
                 <img
-                  src="<%=require('./images/Close-Icon.svg')%>"
+                  src="<%=require('../images/Close-Icon.svg')%>"
                   alt="Cruz"
                   class="close-btn__img"
                 />
@@ -101,7 +108,7 @@
             <div class="popup popup_content_new-place">
               <a class="close-btn">
                 <img
-                  src="<%=require('./images/Close-Icon.svg')%>"
+                  src="<%=require('../images/Close-Icon.svg')%>"
                   alt="Cruz"
                   class="close-btn__img"
                 />
@@ -156,23 +163,26 @@
             <ul class="elements__table">
               <li class="elements__cards">
                 <img
-                  src="<%=require('./images/Yosemite.svg')%>"
+                  src="<%=require('../images/Yosemite.svg')%>"
                   alt="imagen"
                   class="elements__place"
                 />
                 <img
-                  src="<%=require('./images/trash.svg')%>"
+                  src="<%=require('../images/trash.svg')%>"
                   alt="basura"
                   class="elements__trash"
                 />
 
                 <div class="elements__container-info">
                   <p class="elements__description"></p>
-                  <img
-                    src="<%=require('./images/heart-icon.svg')%>"
-                    alt="icono de corazon"
-                    class="elements__icon"
-                  />
+                  <div class="elemnts__container-like">
+                    <img
+                      src="<%=require('../images/heart-icon.svg')%>"
+                      alt="icono de corazon"
+                      class="elements__icon"
+                    />
+                    <p class="elements__likes"></p>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -181,7 +191,7 @@
             <div class="elements__popup-container">
               <a class="close-btn close-btn_show-image">
                 <img
-                  src="<%=require('./images/Close-Icon.svg')%>"
+                  src="<%=require('../images/Close-Icon.svg')%>"
                   alt="Cruz"
                   class="close-btn__img"
                 />
@@ -191,6 +201,55 @@
             </div>
           </div>
           <div class="overlay"></div>
+        </div>
+
+        <div class="popup popup_delete">
+          <div class="popup__container">
+            <a class="close-btn">
+              <img
+                src="<%=require('../images/Close-Icon.svg')%>"
+                alt="Cruz"
+                class="close-btn__img"
+              />
+            </a>
+            <p class="popup__question">¿Estás seguro/a?</p>
+            <button class="popup__confirm">Sí</button>
+          </div>
+        </div>
+
+        <div class="popup poup_new-profile-photo">
+          <a class="close-btn">
+            <img
+              src="<%=require('../images/Close-Icon.svg')%>"
+              alt="Cruz"
+              class="close-btn__img"
+            />
+          </a>
+          <div class="popup__container">
+            <h3 class="popup__title">Cambiar foto de perfil</h3>
+            <form class="popup__form" name="profile-photo" novalidate>
+              <fieldset class="popup__set">
+                <label class="popup__field">
+                  <input
+                    class="popup__input popup__input_url-image"
+                    id="avatar-input"
+                    type="url"
+                    name="avatar"
+                    placeholder="Enlace a la imagen"
+                    required
+                  />
+                  <span class="popup__input-error avatar-input-error"></span>
+                </label>
+
+                <button
+                  type="button"
+                  class="popup__button popup__button_inactive popup__button-avatar"
+                >
+                  Guarda
+                </button>
+              </fieldset>
+            </form>
+          </div>
         </div>
       </main>
       <footer class="footer">

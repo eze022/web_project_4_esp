@@ -14,9 +14,11 @@ export default class Section {
   }
 
   renderItems() {
-    this._items.forEach((item) => {
-      const renderedItem = this._renderer(item);
-      this.addItemAtEnd(renderedItem);
-    });
+    if (Array.isArray(this._items)) {
+      this._items.forEach((item) => {
+        const renderedItem = this._renderer(item);
+        this.addItemAtEnd(renderedItem);
+      });
+    }
   }
 }

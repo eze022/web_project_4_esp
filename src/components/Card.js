@@ -1,9 +1,11 @@
-import { likeCards, removeCards } from "../utils/utils.js";
+import { likeCards, removeCards, updateLikes } from "../utils/utils.js";
 
 export default class Card {
   constructor({ data, handleCardClick }) {
     this._text = data.name;
     this._image = data.link;
+    this._id = data.id;
+    this._likes = data.likes;
     this.handleCardClick = handleCardClick;
   }
 
@@ -19,6 +21,8 @@ export default class Card {
   _setAtributte() {
     this._element.setAttribute("data-link", this._image);
     this._element.setAttribute("data-name", this._text);
+    /*     this._element.setAttribute("data-id", this._id); */
+    /*  this._element.setAttribute("data-likes", this._likes); */
   }
 
   generateCard() {
@@ -37,7 +41,5 @@ export default class Card {
   _setEventListeners() {
     const image = this._element.querySelector(".elements__place");
     const heart = this._element.querySelector(".elements__icon");
-    likeCards(this._element);
-    removeCards(this._element);
   }
 }
