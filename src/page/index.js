@@ -83,7 +83,7 @@ const popupAddForm = new PopupWithForm(
 popupAddForm.setEventListeners();
 
 const popupNewAvatar = new PopupWithForm(
-  ".poup_new-profile",
+  ".poup_profile",
   handleNewProfilePhoto
 );
 popupNewAvatar.setEventListeners();
