@@ -1,11 +1,11 @@
 import "./index.css";
 import FormValidator from "../components/FormValidator.js";
 import Card from "../components/Card.js";
-import Popup from "../components/Popup.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import Section from "../components/Section.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
+import PopupWithConfirmation from "../components/PopupWithConfirmation.js";
 import {
   addButton,
   createButton,
@@ -89,50 +89,64 @@ const popupNewAvatar = new PopupWithForm(
 popupNewAvatar.setEventListeners();
 
 function handleNewProfilePhoto() {
-  avatarButton.textContent = "Guardando...";
-  avatarButton.disabled = true;
+  const profilePopup = new PopupWithConfirmation(
+    ".popup_profile",
+    ".popup__button-avatar"
+  );
+  profilePopup.setLoadingState(true);
   const api = new Api({
     avatar: inputUrlImageAvatar.value,
     baseUrl:
       "https://around.nomoreparties.co/v1/web_es_cohort_03/users/me/avatar",
   });
-  api.setNewAvatar().then((data) => {
-    profileImage.src = data.avatar;
-    avatarButton.textContent = "Guarda";
-    avatarButton.disabled = false;
-    popupNewAvatar.close();
-  });
+  api
+    .setNewAvatar()
+    .then((data) => {
+      profileImage.src = data.avatar;
+      popupNewAvatar.close();
+    })
+    .finally(() => {
+      profilePopup.setLoadingState(false);
+    });
 }
 
 function handleAddFormSubmit() {
-  createButton.textContent = "Guardando...";
-  createButton.disabled = true;
+  const profilePopup = new PopupWithConfirmation(
+    ".popup_content_new-place",
+    ".popup__create-btn"
+  );
+  profilePopup.setLoadingState(true);
   const api = new Api({
     name: inputTitle.value,
     link: inputUrlImage.value,
     baseUrl: "https://around.nomoreparties.co/v1/web_es_cohort_03/cards",
   });
-  api.createNewCard().then((data) => {
-    const card = createCard({
-      name: data.name,
-      link: data.link,
-      id: data._id,
+  api
+    .createNewCard()
+    .then((data) => {
+      const card = createCard({
+        name: data.name,
+        link: data.link,
+        id: data._id,
+      });
+      card.setAttribute("data-id", data._id);
+      card.setAttribute("data-user-id", data.owner._id);
+      updateLikes(card);
+      likeCards(card);
+      removeCards(card);
+      section.addItemAtIniticial(card);
+      popupAddForm.close();
+      createButton.textContent = "Crear";
+      createButton.disabled = false;
+    })
+    .finally(() => {
+      profilePopup.setLoadingState(false);
     });
-    card.setAttribute("data-id", data._id);
-    card.setAttribute("data-user-id", data.owner._id);
-    updateLikes(card);
-    likeCards(card);
-    removeCards(card);
-    section.addItemAtIniticial(card);
-    popupAddForm.close();
-    createButton.textContent = "Crear";
-    createButton.disabled = false;
-  });
 }
 
 function handleProfileFormSubmit() {
-  saveButton.textContent = "Guardando...";
-  saveButton.disabled = true;
+  const profilePopup = new PopupWithConfirmation(".popup", ".popup__save-btn");
+  profilePopup.setLoadingState(true);
   const profileUserInfo = profileUser.getUserInfo();
   profileFullName.textContent = profileUserInfo.name;
   profileJob.textContent = profileUserInfo.job;
@@ -167,8 +181,8 @@ saveButton.addEventListener("click", () => {
 
 openFormButton.addEventListener("click", () => {
   popupProfileForm.open();
-  saveButton.textContent = "Guardar";
-  saveButton.disabled = false;
+  const profilePopup = new PopupWithConfirmation(".popup", ".popup__save-btn");
+  profilePopup.setLoadingState(false);
 });
 
 addButton.addEventListener("click", () => {
